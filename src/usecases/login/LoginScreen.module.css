@@ -1,0 +1,28 @@
+.mainGrid {
+    width: 100vw;
+    height: 100vh;
+}
+
+.memeclubTitle {
+    display: block;
+    font-size: 70px;
+    text-align: justify;
+    margin-right: 20%;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.loginBackground {
+    background-image: url("./Background.svg");
+    background-size: 100vw auto;
+    background-repeat: no-repeat ;
+    orientation: inherit;
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+    background-image: none;
+    background-color: #084a74;
+  }
+}
