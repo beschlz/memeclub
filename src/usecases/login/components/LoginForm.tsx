@@ -1,9 +1,25 @@
 import { TextField } from '@material-ui/core';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import LoginButton from './LoginButton';
 import styles from './LoginForm.module.css';
+import firebase from '../../../firebase';
+import { useHistory } from 'react-router-dom';
 
 const LoginForm: FunctionComponent = () => {
+  const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState(false);
+
+  const handleLoginClicked = async () => {
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, password);
+      history.push('/');
+    } catch {
+      setLoginError(true);
+    }
+  };
+
   return (
     <form className={styles['loginForm']}>
       <p className={styles['loginText']}>Login</p>
@@ -17,6 +33,9 @@ const LoginForm: FunctionComponent = () => {
         name="email"
         autoComplete="email"
         autoFocus
+        onChange={(event) => {
+          setEmail(event.target.value);
+        }}
       />
       <TextField
         variant="outlined"
@@ -29,8 +48,12 @@ const LoginForm: FunctionComponent = () => {
         type="password"
         id="password"
         autoComplete="current-password"
+        onChange={(event) => {
+          setPassword(event.target.value);
+        }}
       />
-      <LoginButton />
+      {loginError && <p>Wrong Username or Password</p>}
+      <LoginButton onLoginButtonClicked={handleLoginClicked} />
     </form>
   );
 };

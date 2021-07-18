@@ -1,9 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import './firebase';
+import LoginScreen from './usecases/login/LoginScreen';
 
 test('renders login page', () => {
-  render(<App />);
+  render(<LoginScreen />);
   const memeclubText = screen.getByText(/meme/i);
 
   expect(memeclubText).toBeInTheDocument();

@@ -2,10 +2,21 @@ import { Button } from '@material-ui/core';
 import React, { FunctionComponent } from 'react';
 import styles from './LoginButton.module.css';
 
-const LoginButton: FunctionComponent = () => {
+interface FunctionComponentProps {
+  onLoginButtonClicked: any;
+}
+
+const LoginButton: FunctionComponent<FunctionComponentProps> = ({
+  onLoginButtonClicked,
+}: FunctionComponentProps) => {
   return (
     <div className={styles['loginButton']}>
-      <Button color="default" fullWidth variant="contained">
+      <Button
+        onClick={onLoginButtonClicked}
+        color="default"
+        fullWidth
+        variant="contained"
+      >
         Login
       </Button>
     </div>
