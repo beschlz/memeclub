@@ -17,6 +17,8 @@ const LoginForm: FunctionComponent = () => {
       history.push('/');
     } catch {
       setLoginError(true);
+      setEmail('');
+      setPassword('');
     }
   };
 
@@ -33,6 +35,7 @@ const LoginForm: FunctionComponent = () => {
         name="email"
         autoComplete="email"
         autoFocus
+        value={email}
         onChange={(event) => {
           setEmail(event.target.value);
         }}
@@ -40,7 +43,6 @@ const LoginForm: FunctionComponent = () => {
       <TextField
         variant="outlined"
         margin="normal"
-        color="secondary"
         required
         fullWidth
         name="password"
@@ -48,11 +50,19 @@ const LoginForm: FunctionComponent = () => {
         type="password"
         id="password"
         autoComplete="current-password"
+        value={password}
         onChange={(event) => {
           setPassword(event.target.value);
         }}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter') {
+            handleLoginClicked();
+          }
+        }}
       />
-      {loginError && <p>Wrong Username or Password</p>}
+      {loginError && (
+        <p className={styles.warningText}>Wrong Username or Password</p>
+      )}
       <LoginButton onLoginButtonClicked={handleLoginClicked} />
     </form>
   );

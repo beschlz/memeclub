@@ -10,3 +10,8 @@
     width: 360px;
     margin-left: 30%;
 }
+
+.warningText {
+    color: orangered;
+    text-align: center;
+}
