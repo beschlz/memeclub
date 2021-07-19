@@ -1,0 +1,17 @@
+.loginText {
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: white;
+    float: left;
+}
+
+.loginForm {
+    width: 360px;
+    margin-left: 30%;
+}
+
+.warningText {
+    color: orangered;
+    text-align: center;
+}

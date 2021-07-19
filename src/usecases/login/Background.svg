@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="1080" viewBox="0 0 1020 1080">
+  <rect id="Rechteck_1" data-name="Rechteck 1" width="512" height="1080" transform="translate(508)" fill="#084a74"/>
+  <g id="Polygon_1" data-name="Polygon 1" fill="#084a74">
+    <path d="M 1015.212341308594 1079.5 L 0.7876799702644348 1079.5 L 508 1.174595236778259 L 1015.212341308594 1079.5 Z" stroke="none"/>
+    <path d="M 508 2.3494873046875 L 1.57550048828125 1079 L 1014.424499511719 1079 L 508 2.3494873046875 M 508 0 L 1016 1080 L 0 1080 L 508 0 Z" stroke="none" fill="#084a74"/>
+  </g>
+</svg>
