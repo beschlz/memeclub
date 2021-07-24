@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "memeclub-7cf4d"
+  },
+  "targets": {
+    "memeclub-7cf4d": {
+      "hosting": {
+        "memeclub-main": [
+          "memeclub"
+        ]
+      }
+    }
   }
 }
