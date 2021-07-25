@@ -5,11 +5,24 @@
 
 .memeclubTitle {
     display: block;
-    font-size: 70px;
+    font-size: 60px;
     text-align: justify;
-    margin-right: 20%;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+}
+
+.logoContainer {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: 'center';
+}
+
+.loginFormContainer {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: 'center';
 }
 
 .loginBackground {

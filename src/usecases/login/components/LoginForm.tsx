@@ -1,6 +1,6 @@
 import { TextField } from '@material-ui/core';
 import React, { FunctionComponent, useState } from 'react';
-import LoginButton from './LoginButton';
+import LoginFormButton from './LoginFormButton';
 import styles from './LoginForm.module.css';
 import firebase from '../../../firebase';
 import { useHistory } from 'react-router-dom';
@@ -22,6 +22,10 @@ const LoginForm: FunctionComponent = () => {
     }
   };
 
+  const handleRequestAccess = () => {
+    history.push('/requestAccess');
+  };
+
   return (
     <form className={styles['loginForm']}>
       <p className={styles['loginText']}>Login</p>
@@ -30,6 +34,7 @@ const LoginForm: FunctionComponent = () => {
         margin="normal"
         required
         fullWidth
+        size="small"
         id="email"
         label="Email Address"
         name="email"
@@ -44,6 +49,7 @@ const LoginForm: FunctionComponent = () => {
         variant="outlined"
         margin="normal"
         required
+        size="small"
         fullWidth
         name="password"
         label="Password"
@@ -63,7 +69,14 @@ const LoginForm: FunctionComponent = () => {
       {loginError && (
         <p className={styles.warningText}>Wrong Username or Password</p>
       )}
-      <LoginButton onLoginButtonClicked={handleLoginClicked} />
+      <LoginFormButton
+        buttonText="Login"
+        onLoginButtonClicked={handleLoginClicked}
+      />
+      <LoginFormButton
+        buttonText="Request Access"
+        onLoginButtonClicked={handleRequestAccess}
+      />
     </form>
   );
 };
