@@ -8,30 +8,32 @@ const LoginScreen: FunctionComponent = () => {
   return (
     <div className={styles['loginBackground']}>
       <Grid className={styles['mainGrid']} container direction="row">
-        <Grid
-          container
-          direction="row-reverse"
-          item
-          xs={4}
-          alignItems="center"
-          alignContent="center"
+        <div
+          className="container"
+          style={{
+            width: '40%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
-          <span className={styles['memeclubTitle']}>
+          <p className={styles['memeclubTitle']}>
             meme
             <br />
             club
-          </span>
-        </Grid>
-        <Grid
-          direction="row"
-          container
-          item
-          xs={8}
-          alignContent="center"
-          alignItems="center"
+          </p>
+        </div>
+        <div
+          className="container"
+          style={{
+            width: '60%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
           <LoginForm />
-        </Grid>
+        </div>
       </Grid>
     </div>
   );

@@ -2,13 +2,15 @@
     font-size: 30px;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
-    color: white;
+    color: black;
     float: left;
 }
 
 .loginForm {
-    width: 360px;
-    margin-left: 30%;
+    width: 320px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
 }
 
 .warningText {

@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
-      - name: npm ci, build and test
+      - name: Build and Test
         run: |
           yarn
           yarn build
