@@ -1,16 +1,13 @@
 import React, { FunctionComponent } from 'react';
-import firebase from '../../firebase';
+import NavBar from './components/NavBar/NavBar';
 
 const PostHomePage: FunctionComponent = () => {
-  const handleLogOut = () => {
-    firebase.auth().signOut();
-  };
+  const handleOpenMenuClick = () => {};
 
   return (
-    <div>
-      <p>Welcome to Memeclub</p>
-      <button onClick={handleLogOut}>Log out</button>
-    </div>
+    <>
+      <NavBar onMenuOpenClick={handleOpenMenuClick} />
+    </>
   );
 };
 

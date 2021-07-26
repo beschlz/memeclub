@@ -1,0 +1,38 @@
+.navBar {
+    height: 80px;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 0.2);
+}
+
+.menu {
+    font-family: 'RobotoMono', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    background-color: #084a74;
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu:hover {
+    transition: background-color 0.3s ease;
+    background-color: white;
+    transition: color 0.1s all;
+    color: #084a74;
+}
+
+.navBarElement {
+    width: 210px;
+    font-family: 'RobotoMono', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBarElement:hover {
+    transition: color 0.1s all;
+    color: #084a74;
+}
