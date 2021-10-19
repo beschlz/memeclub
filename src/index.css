@@ -19,3 +19,9 @@ code {
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "RobotoMono";
+  src: local("RobotoMono"),
+  url("./fonts/RobotoMono/RobotoMono-Medium.ttf") format("truetype");
+  font-weight: normal;
+}

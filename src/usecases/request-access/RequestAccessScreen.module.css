@@ -1,0 +1,18 @@
+.introductionText {
+    font-size: 32px;
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.explanationText {
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
+}
+
+.leftSideColorBar {
+    background-color: #084a74;
+    width: 20vw;
+    height: 100vh;
+}
